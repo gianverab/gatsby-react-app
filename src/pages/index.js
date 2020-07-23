@@ -4,11 +4,13 @@ import Hero from "../components/hero"
 import Layout from "../layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
+import Cell from "../components/cell"
+import Section from "../components/section"
 import wallpaper from "../images/wallpaper.jpg"
 import wallpaper2 from "../images/wallpaper2.jpg"
 import wallpaper3 from "../images/wallpaper3.jpg"
 import wallpaper4 from "../images/wallpaper4.jpg"
-import Section from "../components/section"
+
 import logoReact from "../images/logo-react.png"
 import styled from "styled-components"
 import reactData from "../data/react-course.json"
@@ -72,10 +74,11 @@ const IndexPage = () => (
       <SectionContentWrapper>
         <SectionContent>
           {reactData.sections.map(section => (
-            <Cell key={section.id}>
-              <CellImage src={section.image} />
-              <CellTitle>{section.title}</CellTitle>
-            </Cell>
+            <Cell
+              key={section.id}
+              image={section.image}
+              title={section.title}
+            />
           ))}
         </SectionContent>
       </SectionContentWrapper>
@@ -123,31 +126,6 @@ const SectionContent = styled.div`
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
-  }
-`
-const Cell = styled.div`
-  min-width: 240px;
-  display: grid;
-  grid-template-columns: 60px auto;
-  -webkit-box-align: center;
-  align-items: center;
-  gap: 25px;
-  padding: 10px 0;
-`
-const CellImage = styled.img`
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 10px;
-`
-const CellTitle = styled.h3`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.2;
-  margin: 0;
-
-  @media (max-width: 640px) {
-    font-size: 20px;
   }
 `
 
