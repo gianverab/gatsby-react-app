@@ -1,0 +1,64 @@
+{
+  "sections": [
+    {
+      "title": "React for Designers",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/7jDUZOXkWW88Ai068OmsU0/9b573deeed92cced2270a90fa782b154/react-promo.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "001"
+    },
+    {
+      "title": "Basic Styling with CSS",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/3teTCpaTLioOGcUQgA4kGe/a0d1783d1451e61130958256be80ce8b/react-css.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "002"
+    },
+    {
+      "title": "Adaptive Layouts with CSS Grid",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/657Crspc3KGegCKOO2suks/c6bf7544458c8482a8bc7859ba2e3f42/react-css-grid.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "003"
+    },
+    {
+      "title": "Interactions and Animations",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/4WyHgSydpe6gE0weu2IK6A/8047493b0491e8e662a8c253d6b172f1/react-svg-animation.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "004"
+    },
+    {
+      "title": "SVG Animation",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/4WyHgSydpe6gE0weu2IK6A/8047493b0491e8e662a8c253d6b172f1/react-svg-animation.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "005"
+    },
+    {
+      "title": "Components and Props",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/1ESh51d7iEeYykU4qOsqek/00cefa5410ffe35f43f242d3af681ecc/react-components.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "006"
+    },
+    {
+      "title": "States and Events",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/2YZaHxM1eUsWaiEcqAaiiI/4dd511b40f844b03612bb37a2e6a953d/react-states.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "007"
+    },
+    {
+      "title": "Styled Components",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/5lINjpf9fOKyCe8Umwkm4W/84f0e0190139d4a305483177df291e1d/react-styled-components.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "008"
+    },
+    {
+      "title": "Static Data with JSON",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/63XIFknMgoUQMeOigW0mWm/a724d13321642593fe4f506f5c0a121b/react-json.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "009"
+    },
+    {
+      "title": "GraphQL with Contentful",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/3Ii82YpoKA64Qk8AKWUcsc/28664a6be9e0a80bd521f6843ee78676/react-graphql.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "010"
+    },
+    {
+      "title": "Publish to Netlify",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/5W78N476364cmA6Gaw8YUG/9ac8c9083557a20c52aa21747a1ba4c0/react-netlify.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "011"
+    },
+    {
+      "title": "Payments with Stripe",
+      "image": "https://images.ctfassets.net/ooa29xqb8tix/77pJe68ucMqUGYcg2WAwKc/f4440e4b25564fc0865d8764471291c3/react-stripe.jpg?w=320&h=320&q=50&fit=fill",
+      "id": "012"
+    }
+  ]
+}

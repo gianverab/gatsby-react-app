@@ -11,6 +11,7 @@ import wallpaper4 from "../images/wallpaper4.jpg"
 import Section from "../components/section"
 import logoReact from "../images/logo-react.png"
 import styled from "styled-components"
+import reactData from "../data/react-course.json"
 
 const courses = [
   {
@@ -67,7 +68,13 @@ const IndexPage = () => (
       title="React for Designers"
       desc="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
       text="12 sections - 6 hours"
-    />
+    >
+      <SectionContent>
+        {reactData.sections.map(section => (
+          <div>{section.title}</div>
+        ))}
+      </SectionContent>
+    </Section>
   </Layout>
 )
 
@@ -95,6 +102,12 @@ const CardGroup = styled.div`
   @media (max-width: 720px) {
     grid-template-columns: repeat(1, 1fr);
   }
+`
+const SectionContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  padding: 0px 20px;
 `
 
 export default IndexPage

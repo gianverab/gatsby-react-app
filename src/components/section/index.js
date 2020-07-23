@@ -2,21 +2,24 @@ import React from "react"
 import styled from "styled-components"
 import Wave from "../wave"
 
-const Section = ({ img, logo, title, desc, text }) => (
-  <SectionGroup img={img}>
-    <WaveTop>
-      <Wave />
-    </WaveTop>
-    <WaveBottom>
-      <Wave />
-    </WaveBottom>
-    <SectionLogo src={logo} />
-    <SectionTitleGroup>
-      <SectionTitle>{title}</SectionTitle>
-      <SectionDesc>{desc}</SectionDesc>
-    </SectionTitleGroup>
-    <SectionText>{text}</SectionText>
-  </SectionGroup>
+const Section = ({ img, logo, title, desc, text, children }) => (
+  <>
+    <SectionGroup img={img}>
+      <WaveTop>
+        <Wave />
+      </WaveTop>
+      <WaveBottom>
+        <Wave />
+      </WaveBottom>
+      <SectionLogo src={logo} />
+      <SectionTitleGroup>
+        <SectionTitle>{title}</SectionTitle>
+        <SectionDesc>{desc}</SectionDesc>
+      </SectionTitleGroup>
+      <SectionText>{text}</SectionText>
+    </SectionGroup>
+    {children}
+  </>
 )
 
 const SectionGroup = styled.div`
