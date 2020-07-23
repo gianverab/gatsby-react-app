@@ -69,11 +69,16 @@ const IndexPage = () => (
       desc="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
       text="12 sections - 6 hours"
     >
-      <SectionContent>
-        {reactData.sections.map(section => (
-          <div>{section.title}</div>
-        ))}
-      </SectionContent>
+      <SectionContentWrapper>
+        <SectionContent>
+          {reactData.sections.map(section => (
+            <Cell key={section.id}>
+              <CellImage src={section.image} />
+              <CellTitle>{section.title}</CellTitle>
+            </Cell>
+          ))}
+        </SectionContent>
+      </SectionContentWrapper>
     </Section>
   </Layout>
 )
@@ -103,11 +108,47 @@ const CardGroup = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
+const SectionContentWrapper = styled.div`
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+`
 const SectionContent = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
   padding: 0px 20px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`
+const Cell = styled.div`
+  min-width: 240px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 0;
+`
+const CellImage = styled.img`
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+`
+const CellTitle = styled.h3`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+  }
 `
 
 export default IndexPage

@@ -8,15 +8,16 @@ const Section = ({ img, logo, title, desc, text, children }) => (
       <WaveTop>
         <Wave />
       </WaveTop>
-      <WaveBottom>
-        <Wave />
-      </WaveBottom>
+
       <SectionLogo src={logo} />
       <SectionTitleGroup>
         <SectionTitle>{title}</SectionTitle>
         <SectionDesc>{desc}</SectionDesc>
       </SectionTitleGroup>
       <SectionText>{text}</SectionText>
+      <WaveBottom>
+        <Wave />
+      </WaveBottom>
     </SectionGroup>
     {children}
   </>
@@ -24,12 +25,12 @@ const Section = ({ img, logo, title, desc, text, children }) => (
 
 const SectionGroup = styled.div`
   background: url(${props => props.img});
-  height: 720px;
+  height: 700px;
   background-size: cover;
   display: grid;
   grid-template-rows: 300px auto 200px;
   grid-gap: 20px;
-  color: #ffffff;
+
   position: relative;
 
   @media (max-width: 640px) {
@@ -47,6 +48,7 @@ const SectionTitleGroup = styled.div`
   grid-template-rows: auto 100%;
   margin: 0 40px;
   grid-gap: 20px;
+  color: #ffffff;
 
   @media (max-width: 720px) {
     grid-template-columns: 1fr;
@@ -67,8 +69,10 @@ const SectionDesc = styled.p`
 const SectionText = styled.p`
   text-align: center;
   align-self: start;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
 `
-
 const WaveBottom = styled.div`
   position: absolute;
   width: 100%;
