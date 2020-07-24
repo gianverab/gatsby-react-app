@@ -3,6 +3,7 @@ module.exports = {
     title: `Design+Code 3`,
     description: `A simple Gatsby Site.`,
     author: `@gianverab`,
+    keywords: `gatsby, react, graphql`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
