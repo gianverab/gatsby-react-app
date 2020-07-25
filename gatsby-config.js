@@ -3,6 +3,7 @@ module.exports = {
     title: `Design+Code 3`,
     description: `A simple Gatsby Site.`,
     author: `@gianverab`,
+    keywords: `gatsby, react, graphql`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +12,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "7xcv5v8ab209",
+        accessToken: "Y9D1ram04HMo62k1BAj0UECmhGvC8XhMdpjhfAW7RyU",
       },
     },
     `gatsby-transformer-sharp`,

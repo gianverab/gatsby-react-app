@@ -9,7 +9,6 @@ const Cell = ({ image, title }) => (
 )
 
 const CellGroup = styled.div`
-  min-width: 240px;
   display: grid;
   grid-template-columns: 60px auto;
   -webkit-box-align: center;
@@ -26,9 +25,9 @@ const CellImage = styled.img`
 const CellTitle = styled.h3`
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.2;
   margin: 0;
-
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   @media (max-width: 640px) {
     font-size: 20px;
   }

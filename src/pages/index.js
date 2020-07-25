@@ -115,7 +115,7 @@ const SectionContentWrapper = styled.div`
   display: grid;
   justify-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 `
 const SectionContent = styled.div`
