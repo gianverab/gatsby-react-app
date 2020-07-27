@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import logo from "../../images/logo-designcode.svg"
 import styled from "styled-components"
+import StripeCheckout from "react-stripe-checkout"
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -14,6 +15,24 @@ const Header = () => {
     } else {
       setScrolled(false)
     }
+  }
+
+  const handlePurchase = token => {
+    const amount = 5000
+    const description = "My awesome product"
+
+    const bodyObject = {
+      tokenId: token.id,
+      email: token.email,
+      name: token.name,
+      description,
+      amount,
+    }
+
+    fetch("http:localhost:9000/stripe-charge", {
+      method: "POST",
+      body: JSON.stringify(bodyObject),
+    })
   }
 
   useEffect(() => {
@@ -30,9 +49,16 @@ const Header = () => {
         <Link to="/courses">Courses</Link>
         <Link to="/downloads">Downloads</Link>
         <Link to="/workshops">Workshops</Link>
-        <Link to="/buy">
+        <StripeCheckout
+          amount={5000}
+          image="https://cl.ly/0K2f1V3K3h0D/download/Logo.jpg"
+          token={handlePurchase}
+          stripeKey={
+            "pk_test_51H9aL7Eh3RGAnd330gilU2jCshO486dOMVRVyYtQqayej9TyLM6RCDKcm91x6zzBsts7Lkx7YxLlu9E8nYN37zHV00cDm9U4N9"
+          }
+        >
           <HeaderButton>Buy</HeaderButton>
-        </Link>
+        </StripeCheckout>
       </HeaderGroup>
     </HeaderContainer>
   )
